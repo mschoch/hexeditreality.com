@@ -24,10 +24,9 @@ function drawInside(here, dbs) {
             things.push({db: dbs[i], path: "/temp", red: "avg", lbl:""+dbs[i]+" temp"});
         }
     }
-
     var context = seriesly.context()
         .step(detailStep)
-        .size(window.innerWidth-200)
+        .size($(here).width())
         .serverDelay(1000)
         .clientDelay(1000);
 
@@ -80,7 +79,7 @@ function drawOutside(here, dbs) {
 
     var context = seriesly.context()
         .step(detailStep)
-        .size(window.innerWidth-200)
+        .size($(here).width())
         .serverDelay(1000)
         .clientDelay(1000);
 
