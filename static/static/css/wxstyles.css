@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+}
+
+.axis {
+  font: 10px sans-serif;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.axis text {
+  -webkit-transition: fill-opacity 250ms linear;
+}
+
+.axis path {
+  display: none;
+}
+
+.axis line {
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis.top {
+  background-image: linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -o-linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -moz-linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -webkit-linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -ms-linear-gradient(top, #fff 0%, rgba(255,255,255,0) 100%);
+  top: 0px;
+  /* padding: 0 0 24px 0; */
+  padding: 0;
+}
+
+.axis.bottom {
+  background-image: linear-gradient(bottom, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -o-linear-gradient(bottom, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -moz-linear-gradient(bottom, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -webkit-linear-gradient(bottom, #fff 0%, rgba(255,255,255,0) 100%);
+  background-image: -ms-linear-gradient(bottom, #fff 0%, rgba(255,255,255,0) 100%);
+  bottom: 0px;
+  padding: 24px 0 0 0;
+  position: fixed;
+}
+
+.horizon {
+  overflow: hidden;
+  position: relative;
+  border-top: solid 1px #000;
+  border-bottom: solid 1px #000;
+}
+
+.horizon + .horizon {
+  border-top: none;
+}
+
+.horizon canvas {
+  display: block;
+}
+
+.horizon .title,
+.horizon .value {
+  bottom: 0;
+  line-height: 30px;
+  margin: 0 6px;
+  position: absolute;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  white-space: nowrap;
+}
+
+.horizon.last {
+    padding-bottom: 2px;
+}
+
+.horizon.last + .horizon.first {
+    padding-top: 2px;
+    border-top: none;
+}
+
+.horizon.max {
+    padding-top: 2px;
+}
+
+.horizon.min {
+    padding-bottom: 2px;
+}
+
+.horizon .title {
+  left: 0;
+}
+
+.horizon .value {
+  right: 0;
+}
+
+.line {
+  background: #000;
+  opacity: .2;
+  z-index: 2;
+}
+
+#header {
+    text-align: center;
+    border-bottom: solid 2px #aaa;
+}
+
+#header a {
+    text-decoration: none;
+    background: #fff;
+}
+
+#header span {
+    background: #aaa;
+    padding: 0 2px 0 2px;
+}
+
+
+
+
+.comparison {
+  border-bottom: solid 1px #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.comparison {
+  border-top: solid 1px #000;
+  border-bottom: solid 1px #000;
+}
+
+.comparison + .comparison {
+  border-top: none;
+}
+
+.comparison canvas {
+  display: block;
+}
+
+.comparison .title, .comparison .value {
+  bottom: 0;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  white-space: nowrap;
+}
+
+.comparison .title, .comparison .value.primary {
+    margin-right: 5px;
+}
+
+.value.positive {
+    color: #ff3333;
+}
+
+.value.negative {
+    color: #3333ff;
+}
+
+.comparison.max {
+    padding-top: 2px;
+}
+
+.comparison.min {
+    padding-bottom: 2px;
+}
