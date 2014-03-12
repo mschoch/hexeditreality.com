@@ -1,7 +1,7 @@
 var seriesUrlBase = "http://seriesly.hexeditreality.com/";
 
 var ignore = {
-    "device": true, "level2": true
+    "device": true, "level2": true, "level1": true
 };
 
 var compareStep = 1000 * 60 * 30;
@@ -73,7 +73,7 @@ function drawOutside(here, dbs) {
             things.push({db: dbs[i], path: "/temp", red: "avg", lbl:"temp"});
             things.push({db: dbs[i], path: "/dewp", red: "avg", lbl:"dewpoint"});
             things.push({db: dbs[i], path: "/pressure", red: "avg", lbl:"pressure"});
-            things.push({db: "device", path: "/batteryVoltage", red: "avg", lbl:"wx station voltage"});
+//            things.push({db: "device", path: "/batteryVoltage", red: "avg", lbl:"wx station voltage"});
         }
     }
 
