@@ -21,7 +21,7 @@ function drawInside(here, dbs) {
     var things = [];
     for (var i = 0; i < dbs.length; i++) {
         if (!shouldIgnore(dbs[i])) {
-            things.push({db: dbs[i], path: "/temp", red: "avg", lbl:""+dbs[i]+" temp"});
+            things.push({db: dbs[i], path: "/t", red: "avg", lbl:""+dbs[i]+" temp"});
         }
     }
     var context = seriesly.context()
@@ -70,9 +70,9 @@ function drawOutside(here, dbs) {
     var things = [];
     for (var i = 0; i < dbs.length; i++) {
         if (!shouldIgnore(dbs[i])) {
-            things.push({db: dbs[i], path: "/temp", red: "avg", lbl:"temp"});
-            things.push({db: dbs[i], path: "/dewp", red: "avg", lbl:"dewpoint"});
-            things.push({db: dbs[i], path: "/pressure", red: "avg", lbl:"pressure"});
+            things.push({db: dbs[i], path: "/t", red: "avg", lbl:"temp"});
+            things.push({db: dbs[i], path: "/dp", red: "avg", lbl:"dewpoint"});
+            things.push({db: dbs[i], path: "/p", red: "avg", lbl:"pressure"});
 //            things.push({db: "device", path: "/batteryVoltage", red: "avg", lbl:"wx station voltage"});
         }
     }
